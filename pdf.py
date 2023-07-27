@@ -7,8 +7,10 @@ for page_number in range(num_pages):
     page = pdf_reader.pages[page_number]
     text = page.extract_text()
     data += text
+
 with open('sample.txt', 'w', encoding='utf-8') as file:
     file.write(data)
+
 
 file.close()
 pdf_file.close()
